@@ -251,7 +251,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.31525, y: 16.26, z: -10}
+  m_LocalPosition: {x: -32.319798, y: 16.26, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -559,6 +559,7 @@ GameObject:
   - component: {fileID: 1614326833}
   - component: {fileID: 1614326835}
   - component: {fileID: 1614326834}
+  - component: {fileID: 1614326836}
   m_Layer: 0
   m_Name: Ahyeon
   m_TagString: Untagged
@@ -640,7 +641,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -683,6 +684,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0.24535531, y: -1.1368557}
   m_Size: {x: 3.0573828, y: 0.39470196}
   m_Direction: 1
+--- !u!114 &1614326836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614326829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fca02d6f18339246b4b784df91297a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torqueAmount: 3
 --- !u!1 &1769830761
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,7 +798,7 @@ Transform:
   m_GameObject: {fileID: 1769830761}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.31525, y: 16.26, z: -10}
+  m_LocalPosition: {x: -32.319798, y: 16.26, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
