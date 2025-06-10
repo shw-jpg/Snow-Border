@@ -4,12 +4,26 @@ using UnityEngine.SceneManagement;
 public class CeashDetector : MonoBehaviour
 {
     [SerializeField] private float reloadDelay = 2f;
+    [SerializeField] private ParticleSystem crashEffect;
+    [SerializeField] private AudioClip crashsound;
+    
+    private AudioSource audioSource;
+    private PlayerController playerController;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        playerController = GetComponent<PlayerController>();
+    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Ground"))
         {
-            Debug.Log("오!,내 머리야!");
+            crashEffect.Play();
+            audioSource.PlayOneShot(crashsound);
+            playerController.GameOver();
             Invoke(nameof(LoadFirstScene), reloadDelay);
         }
     }
